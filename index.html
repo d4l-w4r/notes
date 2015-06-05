@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Notes</title>
+        <meta name="description" content="A simple note taking app">
+
+        <!--
+          viewport allows you to control how mobile browsers will render your content.
+          width=device-width tells mobile browsers to render your content across the
+          full width of the screen, without being zoomed out (by default it would render
+          it at a desktop width, then shrink it to fit.)
+          Read more about it here:
+          https://developer.mozilla.org/Mozilla/Mobile/Viewport_meta_tag
+        -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+        <link rel="stylesheet" href="css/app.css">
+
+        <!--
+          The following line sets the color of the phones status bar to match
+          the color of our apps menu header
+        -->
+        <meta name="theme-color" content="#ff9500"> <!-- (gaia-theme.css): color-orange -->
+
+        <!--
+        Inline JavaScript code is not allowed for privileged and certified apps,
+        due to Content Security Policy restrictions.
+        You can read more about it here: https://developer.mozilla.org/Apps/CSP
+        Plus keeping your JavaScript separated from your HTML is always a good practice!
+
+        We're also using the 'defer' attribute. This allows us to tell the browser that
+        it should not wait for this file to load before continuing to load the rest of
+        resources in the page. Then, once everything has been loaded, it will parse and
+        execute the deferred files.
+        Read about defer: https://developer.mozilla.org/Web/HTML/Element/script#attr-defer
+        -->
+        <script type="text/javascript" src="js/app.js" defer></script>
+
+        <!--
+        The following two lines are for loading the localisations library
+        and the localisation data-so people can use the app in their
+        own language (as long as you provide translations).
+        -->
+        <link rel="prefetch" type="application/l10n" href="data/locales.ini" />
+        <script type="text/javascript" src="js/libs/l10n.js" defer></script>
+
+        <!--
+        The following gaia components will be used
+        -->
+
+        <!-- CSS -->
+       <link rel="stylesheet" type="text/css" href="bower_components/base/base.css"/>
+       <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/gaia-theme.css"/>
+       <link rel="stylesheet" type="text/css" href="bower_components/gaia-fonts/style.css"/>
+        <!-- Script -->
+        <script src="bower_components/gaia-theme/libs/gaia-theme-selector.js"></script>
+        <script src="bower_components/gaia-icons/gaia-icons.js"></script>
+        <script src="bower_components/gaia-component/gaia-component.js"></script>
+        <script src="bower_components/pressed/pressed.js"></script>
+        <script src="bower_components/gaia-header/gaia-header.js"></script>
+        <script src="bower_components/font-fit/font-fit.js"></script>
+
+        <style>
+          gaia-header {
+            margin-bottom: 15px;
+          }
+
+        </style>
+    </head>
+
+    <body onload="resize_header()">
+
+        <gaia-header action="menu">
+           <h1 data-l10n-id="app_title"></h1>
+           <a/> <!-- invisible anchor to make sure Title of the menu is centered-->
+        </gaia-header>
+
+        <div class="appContent">
+
+          <section>
+              <p data-l10n-id="app_description"></p>
+              <p data-l10n-id="message"></p>
+          </section>
+
+        </div>
+    </body>
+</html>

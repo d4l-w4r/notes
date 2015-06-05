@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "name": "Notes",
+  "description": "A Simple note taking app",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/icon16x16.png",
+    "48": "/img/icons/icon48x48.png",
+    "60": "/img/icons/icon60x60.png",
+    "128": "/img/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Daniel Waller",
+    "url": "http://github.com/danielw93"
+  },
+  "type": "privileged",
+  "permissions": {},
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "es": {
+      "name": "Notes",
+      "description": "Una applicacíon sencilla para toma de notas",
+      "permissions": {}
+    }
+  },
+  "default_locale": "en"
+}
